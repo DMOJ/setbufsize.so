@@ -1,10 +1,13 @@
 all: setbufsize32 setbufsize64
 
 setbufsize32:
-	gcc -Wall -m32 -shared -fPIC -o setbufsize32.so setbufsize.c 
+	BITNESS=32 make setbufsize
 
 setbufsize64:
-	gcc -Wall -m64 -shared -fPIC -o setbufsize64.so setbufsize.c 
+	BITNESS=64 make setbufsize
+
+setbufsize:
+	gcc -Wall -m$(BITNESS) -shared -fPIC -o setbufsize$(BITNESS).so setbufsize.c
 
 clean:
 	rm -rf *.so
