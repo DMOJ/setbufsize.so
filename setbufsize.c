@@ -6,7 +6,7 @@ void _setbufsize_setbuffer(FILE *handle, char *env_str) {
     if (buf_env_str != NULL) {
         char *end;
         unsigned long buf_size = strtoul(buf_env_str, &end, 10);
-        if (*end == NULL) {
+        if (*end == '\0') {
             // Need this branch since IOFBF when buf_size=0 actually
             // sets the buffer size to an OS-preferred, nonzero buffer
             if (buf_size) {
