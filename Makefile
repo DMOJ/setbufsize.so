@@ -1,9 +1,9 @@
-all: setbufsize32 setbufsize64
+all: setbufsize32.so setbufsize64.so
 
-setbufsize32:
+setbufsize32.so:
 	BITNESS=32 make setbufsize
 
-setbufsize64:
+setbufsize64.so:
 	BITNESS=64 make setbufsize
 
 setbufsize:
