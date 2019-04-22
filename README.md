@@ -1,4 +1,4 @@
-# setbufsize [![Linux Build Status](https://travis-ci.org/DMOJ/setbufsize.svg?branch=master)](https://travis-ci.org/DMOJ/setbufsize)
+# setbufsize.so [![Linux Build Status](https://travis-ci.org/DMOJ/setbufsize.so.svg?branch=master)](https://travis-ci.org/DMOJ/setbufsize.so)
 
 `LD_PRELOAD` library for controlling standard stream buffer sizes.
 
